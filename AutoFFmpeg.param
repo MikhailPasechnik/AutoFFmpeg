@@ -50,7 +50,7 @@ Category=Options
 CategoryOrder=0
 CategoryIndex=5
 Label=Input File
-Default=<Info.OutputDirectory0>/DSMAT/<Plugin.SceneFile.basename>/<Plugin.SceneFile.basename>_beauty/<Plugin.SceneFile.basename>_beauty.%04d.tiff
+Default=<Info.OutputDirectory0>/<Info.OutputFilename0>
 Description=File path with token support. Token format: <token> Example: <Info.OutputDirectory0> Returns first output directory <Plugin.SceneFile.basename> Returns Scene file base name without extension <Plugin.SceneFile.extension> Returns Scene file extension
 
 [OutputFile]
@@ -59,7 +59,7 @@ Category=Options
 CategoryOrder=0
 CategoryIndex=6
 Label=Output File
-Default=<Info.OutputDirectory0>/DSMAT/<Plugin.SceneFile.basename>/<Plugin.SceneFile.basename>_beauty/<Plugin.SceneFile.basename>_beauty.mp4
+Default=<Info.OutputDirectory0>/preview.mp4
 Description=File path with token support. Token format: <token> Example: <Info.OutputDirectory0> Returns first output directory <Plugin.SceneFile.basename> Returns Scene file base name without extension <Plugin.SceneFile.extension> Returns Scene file extension
 
 [Priority]

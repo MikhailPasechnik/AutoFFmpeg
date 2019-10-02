@@ -1,0 +1,72 @@
+[State]
+Type=Enum
+Items=Global Enabled;Opt-In;Disabled
+Category=Options
+CategoryOrder=0
+Index=0
+Label=State
+Default=Disabled
+Description=
+
+[JobNameFilter]
+Type=string
+Category=Options
+CategoryOrder=0
+CategoryIndex=1
+Label=Job Name Filter (python regular expression)
+Default=.+
+Description=Job Name Filter (python regular expression)
+
+[PluginNameFilter]
+Type=string
+Category=Options
+CategoryOrder=0
+CategoryIndex=2
+Label=Plugin Name Filter (python regular expression)
+Default=.+
+Description=Plugin Name Filter (python regular expression)
+
+[InputArgs]
+Type=string
+Category=Options
+CategoryOrder=0
+CategoryIndex=3
+Label=Input Args
+Default=
+Description=
+
+[OutputArgs]
+Type=string
+Category=Options
+CategoryOrder=0
+CategoryIndex=4
+Label=Output Args
+Default=-vcodec libx264 -b:v 12000k -bufsize 64k
+Description=
+
+[InputFile]
+Type=Folder
+Category=Options
+CategoryOrder=0
+CategoryIndex=5
+Label=Input File
+Default=<Info.OutputDirectory0>/DSMAT/<Plugin.SceneFile.basename>/<Plugin.SceneFile.basename>_beauty/<Plugin.SceneFile.basename>_beauty.%04d.tiff
+Description=File path with token support. Token format: <token> Example: <Info.OutputDirectory0> Returns first output directory <Plugin.SceneFile.basename> Returns Scene file base name without extension <Plugin.SceneFile.extension> Returns Scene file extension
+
+[OutputFile]
+Type=Folder
+Category=Options
+CategoryOrder=0
+CategoryIndex=6
+Label=Output File
+Default=<Info.OutputDirectory0>/DSMAT/<Plugin.SceneFile.basename>/<Plugin.SceneFile.basename>_beauty/<Plugin.SceneFile.basename>_beauty.mp4
+Description=File path with token support. Token format: <token> Example: <Info.OutputDirectory0> Returns first output directory <Plugin.SceneFile.basename> Returns Scene file base name without extension <Plugin.SceneFile.extension> Returns Scene file extension
+
+[Priority]
+Type=integer
+Category=Options
+CategoryOrder=0
+CategoryIndex=7
+Label=Job Priority
+Default=50
+Description=

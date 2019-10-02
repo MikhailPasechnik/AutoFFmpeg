@@ -1,7 +1,8 @@
 Deadline plugin for automatically creating preview from rendered job using ffmpeg.
+Creates separate ffmpeg job on job completion which encodes rendered sequence.
 
 **Installation**:
-  - Copy `AutoFFmpeg.py` and `AutoFFmpeg.param` to `<Deadline Repository>/events/AutoFFmpeg` folder.
+  - Clone repository to `<Deadline Repository>/events/` or copy `AutoFFmpeg.py` and `AutoFFmpeg.param` to `<Deadline Repository>/events/AutoFFmpeg` folder.
   - Open menu `Tools - Configure Events..` in deadline monitor and choose `AutoFFmpeg` plugin from list and enable it.
 
 **Configuration**:

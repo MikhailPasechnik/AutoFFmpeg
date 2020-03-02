@@ -258,7 +258,7 @@ def isSequence(sequence):
     """
     for pattern in (
             r"(?P<head>.+?)(?P<padding>#+)(?P<tail>\.\w+$)",
-            r"(?P<head>.+)(?P<padding>%0?\d?d)(?P<tail>.\w+$)"):
+            r"(?P<head>.+)(?P<padding>%0?\d?d)(?P<tail>\.\w+$)"):
 
         search = re.search(pattern, sequence)
 
@@ -280,7 +280,7 @@ def sequenceToWildcard(sequence):
     """
     for pattern in (
             r"(?P<head>.+?)(?P<padding>#+)(?P<tail>\.\w+$)",
-            r"(?P<head>.+)(?P<padding>%0?\d?d)(?P<tail>.\w+$)"):
+            r"(?P<head>.+)(?P<padding>%0?\d?d)(?P<tail>\.\w+$)"):
 
         search = re.search(pattern, sequence)
 

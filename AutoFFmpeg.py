@@ -50,9 +50,14 @@ class AutoFFmpeg(DeadlineEventListener):
         outputFileName = self.GetConfigEntry('OutputFile')
 
         # Format tokens
-        inputFileName = formatToken(job, getTokens(inputFileName), inputFileName)
-        outputFileName = formatToken(job, getTokens(outputFileName), outputFileName)
-
+        delimiter = self.GetConfigEntryWithDefault('Delimiter', '').stript().replace(' ', '')
+        if len(delimiter) in [1, 2]:
+            inputFileName = formatToken(job, getTokens(inputFileName, delimiter), inputFileName)
+            outputFileName = formatToken(job, getTokens(outputFileName, delimiter), outputFileName)
+        else:
+            self.LogWarning('Token Delimiter "%s" should be one or to char long' % delimiter)
+            return
+            
         # Path mapping
         inputFileName = RepositoryUtils.CheckPathMapping(inputFileName, True)
         outputFileName = RepositoryUtils.CheckPathMapping(outputFileName, True)

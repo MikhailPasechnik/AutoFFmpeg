@@ -17,3 +17,4 @@ Creates separate ffmpeg job on job completion which encodes rendered sequence.
   - **Input File**: Uses tokens for example: `<Info.OutputDirectory0>/<Info.OutputFilename0>` will pick first output folder and first output file of the job using submit info/plugin information.
   - **Input File**: Uses tokens for example: `<Info.OutputDirectory0>/preview.mp4` will pick first output folder of the job using submit info/plugin information.
   - **Job Priority**: ffmpeg job priority.
+  - **Token Delimiter**: Token delimiter to use in **OutputFile** and **InputFile**. May be one or to symbol long. Default is `<>`. 

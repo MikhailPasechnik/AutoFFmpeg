@@ -70,3 +70,12 @@ CategoryIndex=7
 Label=Job Priority
 Default=50
 Description=
+
+[Delimiter]
+Type=string
+Category=Options
+CategoryOrder=0
+CategoryIndex=8
+Label=Token Delimiter
+Default=<>
+Description=Token delimiter to use in OutputFile and InputFile. May be one or to symbol long.

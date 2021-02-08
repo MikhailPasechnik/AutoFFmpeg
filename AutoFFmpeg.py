@@ -50,7 +50,7 @@ class AutoFFmpeg(DeadlineEventListener):
         outputFileName = self.GetConfigEntry('OutputFile')
 
         # Format tokens
-        delimiter = self.GetConfigEntryWithDefault('Delimiter', '').stript().replace(' ', '')
+        delimiter = self.GetConfigEntryWithDefault('Delimiter', '').strip().replace(' ', '')
         if len(delimiter) in [1, 2]:
             inputFileName = formatToken(job, getTokens(inputFileName, delimiter), inputFileName)
             outputFileName = formatToken(job, getTokens(outputFileName, delimiter), outputFileName)

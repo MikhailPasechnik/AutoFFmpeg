@@ -173,7 +173,8 @@ def createFFmpegJob(job, inputFileName, outputFileName, outputArgs='', inputArgs
     )
 
     # Ensure Temp directory exist
-    os.makedirs(ClientUtils.GetDeadlineTempPath(), exist_ok=True)
+    if not os.path.exists(ClientUtils.GetDeadlineTempPath()):
+        os.makedirs(ClientUtils.GetDeadlineTempPath())
 
     # Write info files
     for p, i in ((jobInfoFile, jobInfo), (pluginInfoFile, pluginInfo)):

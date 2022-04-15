@@ -172,6 +172,9 @@ def createFFmpegJob(job, inputFileName, outputFileName, outputArgs='', inputArgs
         ClientUtils.GetDeadlineTempPath(), "ffmpeg_event_plugin_{0}.job".format(job.JobName)
     )
 
+    # Ensure Temp directory exist
+    os.makedirs(ClientUtils.GetDeadlineTempPath(), exist_ok=True)
+
     # Write info files
     for p, i in ((jobInfoFile, jobInfo), (pluginInfoFile, pluginInfo)):
         with open(p, 'w') as f:

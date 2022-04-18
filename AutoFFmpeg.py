@@ -166,10 +166,10 @@ def createFFmpegJob(job, inputFileName, outputFileName, outputArgs='', inputArgs
     }
 
     jobInfoFile = os.path.join(
-        ClientUtils.GetDeadlineTempPath(), "ffmpeg_event_{0}.job".format(job.JobName)
+        ClientUtils.GetDeadlineTempPath(), "ffmpeg_event_{0}.job".format(job.JobId)
     )
     pluginInfoFile = os.path.join(
-        ClientUtils.GetDeadlineTempPath(), "ffmpeg_event_plugin_{0}.job".format(job.JobName)
+        ClientUtils.GetDeadlineTempPath(), "ffmpeg_event_plugin_{0}.job".format(job.JobId)
     )
 
     # Ensure Temp directory exist
